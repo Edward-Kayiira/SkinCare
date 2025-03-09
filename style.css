@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+} 
+
+:root{
+    --coverColor: white;
+    --textColor: black;
+    --backgroundColor: #FFC0CB;
+    --buttonColor: #FF69B4;
+    --colorOne: #FFC0CB;
+    --colorTwo: #FFB6C1;
+    --colorThree: #FF69B4;
+    --colorFour: #FF1493;
+    --colorFive: #DB7093;
+    --colorSix: #C71585;
+
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(photos/coverOne-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    background-color: var(--colorFour);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 1%;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+    position: absolute;
+    left: 0;
+    bottom:  -6px;
+    transition: 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
