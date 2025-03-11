@@ -274,7 +274,7 @@ section h3{
 .ourBlog{
     display: grid;
     grid-template-columns: repeat(2, 0.8fr);
-    grid-template-rows: repeat(2, 0.8fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 10px;
     margin: 20px 30px;
 }
@@ -290,7 +290,7 @@ section h3{
     width: 100%;
     height: 200px;
     /* aspect-ratio: 0.5 / 0.5; */
-    object-fit: cover;
+    object-fit: cover; 
     /* border-radius: 10px; */
 }
 .blog h4{
@@ -305,5 +305,90 @@ section h3{
 @media screen and (max-width: 768px){
     .ourBlog{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* footer */
+footer{
+    background-image: url(photos/footerTwo.jpg);
+    color: white;
+    text-align: center;
+    /* padding: 20px 0; */
+}
+footer div{
+    background-color: rgba(36, 33, 34, 0.377);
+    text-align: center;
+    padding: 10px 10%;
+}
+footer div p{
+    font-size: 20px;
+}
+footer div a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer div button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0;
+}
+footer div button:hover{
+    background-color: var(--colorFive);
+}
+footer a:hover{
+    color: var(--colorFive);
+}
+/* media query */
+@media screen and (max-width: 768px){
+    .header-text h1{
+        font-size: 40px;
+    }
+    .header-text p{
+        font-size: 16px;
+    }
+    .header-text button{
+        font-size: 16px;
+    }
+    .section-text h1{
+        font-size: 30px;
+    }
+    .section-text p{
+        font-size: 16px;
+    }
+    .section-text button{
+        font-size: 16px;
+    }
+    .product h2{
+        font-size: 16px;
+    }
+    .product p{
+        font-size: 14px;
+    }
+    .product button{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .product-text h2{
+        font-size: 16px;
+    }
+    .product-text p{
+        font-size: 14px;
+    }
+    .product-text button{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .one h3{
+        font-size: 20px;
+    }
+    .blog h4{
+        font-size: 16px;
+    }
+    .blog p{
+        font-size: 14px;
     }
 }
