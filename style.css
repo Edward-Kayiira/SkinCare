@@ -12,7 +12,7 @@ body{
 :root{
     --coverColor: white;
     --textColor: black;
-    --backgroundColor: #FFC0CB;
+    --backgroundColor: #ffffff;
     --buttonColor: #FF69B4;
     --colorOne: #FFC0CB;
     --colorTwo: #FFB6C1;
@@ -68,4 +68,103 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+.icon{
+    display: flex;
+    align-items: center;
+}
+.icon i{
+    font-size: 20px;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.icon i:hover{
+    color: var(--colorFive);
+}
+/* header-text */
+.header-text{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(36, 33, 34, 0.377);
+    /* display: flex; */
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* padding: 100px 1%; */
+    text-align: center;
+    color: white;
+}
+.header-text h1{
+    font-size: 80px;
+}
+.header-text p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.header-text button{
+    margin-top: 20px;
+    border-radius: 20px;
+    border: solid 2px white;
+    padding: 10px 25px;
+}
+/* cart */
+section{
+    margin: 20px 0;
+}
+section h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+/* products */
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 50px;
+}
+.product{
+    background-color: var(--coverColor);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    border: solid 1px var(--colorOne);
+}
+.product img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product h2{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.product p{
+    font-size: 16px;
+    margin: 10px 0;
+}
+.product button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product button:hover{
+    background-color: var(--colorFive);
+}
+@media screen and (max-width: 768px){
+    .products{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
