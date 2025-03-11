@@ -110,3 +110,66 @@ nav ul li a:hover::after{
     border: solid 2px white;
     padding: 10px 25px;
 }
+/* cart */
+.cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.cart h1{
+    font-size: 30px;
+}
+.cart a{
+    text-decoration: none;
+    color: var(--colorFour);
+    padding: 10px 20px;
+    border: solid 2px var(--colorFour);
+    border-radius: 20px;
+}
+.cart a:hover{
+    background-color: var(--colorFour);
+    color: white;
+}
+/* products */
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.product{
+    background-color: var(--coverColor);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.product img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product h2{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.product p{
+    font-size: 16px;
+    margin: 10px 0;
+}
+.product button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--buttonColor);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product button:hover{
+    background-color: var(--colorFive);
+}
