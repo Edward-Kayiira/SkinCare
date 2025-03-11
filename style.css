@@ -12,7 +12,7 @@ body{
 :root{
     --coverColor: white;
     --textColor: black;
-    --backgroundColor: #FFC0CB;
+    --backgroundColor: #ffffff;
     --buttonColor: #FF69B4;
     --colorOne: #FFC0CB;
     --colorTwo: #FFB6C1;
@@ -111,31 +111,20 @@ nav ul li a:hover::after{
     padding: 10px 25px;
 }
 /* cart */
-.cart{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section{
     margin: 20px 0;
 }
-.cart h1{
+section h3{
+    text-align: center;
     font-size: 30px;
-}
-.cart a{
-    text-decoration: none;
-    color: var(--colorFour);
-    padding: 10px 20px;
-    border: solid 2px var(--colorFour);
-    border-radius: 20px;
-}
-.cart a:hover{
-    background-color: var(--colorFour);
-    color: white;
+    margin-bottom: 20px;
 }
 /* products */
 .products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
+    margin: 20px 50px;
 }
 .product{
     background-color: var(--coverColor);
@@ -143,6 +132,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     text-align: center;
     position: relative;
+    border: solid 1px var(--colorOne);
 }
 .product img{
     width: 100%;
@@ -162,7 +152,7 @@ nav ul li a:hover::after{
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: var(--buttonColor);
+    background-color: black;
     color: white;
     cursor: pointer;
     position: absolute;
@@ -172,4 +162,9 @@ nav ul li a:hover::after{
 }
 .product button:hover{
     background-color: var(--colorFive);
+}
+@media screen and (max-width: 768px){
+    .products{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
