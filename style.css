@@ -83,17 +83,16 @@ nav ul li a:hover::after{
 .icon i:hover{
     color: var(--colorFive);
 }
+
+
 /* header-text */
 .header-text{
     width: 100%;
     height: 100vh;
     background-color: rgba(36, 33, 34, 0.377);
-    /* display: flex; */
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    /* padding: 100px 1%; */
     text-align: center;
     color: white;
 }
@@ -111,6 +110,8 @@ nav ul li a:hover::after{
     border: solid 2px white;
     padding: 10px 25px;
 }
+
+
 /* cart */
 section{
     margin: 20px 0;
@@ -120,6 +121,9 @@ section h3{
     font-size: 30px;
     margin-bottom: 20px;
 }
+
+
+
 /* products */
 .products{
     display: grid;
@@ -137,7 +141,6 @@ section h3{
 }
 .product img{
     width: 100%;
-    /* height: 200px; */
     aspect-ratio: 1 / 1;
 
     object-fit: cover;
@@ -185,12 +188,9 @@ section h3{
     width: 100%;
     height: 60vh;
     background-color: rgba(36, 33, 34, 0.377);
-    /* display: flex; */
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    /* padding: 100px 1%; */
     text-align: center;
     color: white;
 }
@@ -215,15 +215,9 @@ section h3{
     gap: 10px;
     margin: 20px 30px;
 }
-/* .productimg{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-} */
 .product-img img{
     width: 100%;
     height: 200px;
-    /* aspect-ratio: 1 / 1; */
 
     object-fit: cover;
     border-radius: 10px;
@@ -236,10 +230,7 @@ section h3{
     background-color: black;
     color: white;
     cursor: pointer;
-    /* position: absolute; */
     bottom: 20px;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
 }
 .product-text button:hover{
     background-color: var(--colorFive);
@@ -265,7 +256,9 @@ section h3{
         grid-template-columns: repeat(1, 1fr);
     }
 }
-/* blog */
+
+
+/* blog section */
 .one h3{
     text-align: center;
     font-size: 30px;
@@ -284,14 +277,11 @@ section h3{
     border-radius: 10px;
     text-align: center;
     position: relative;
-    /* border: solid 1px var(--colorOne); */
 }
 .blog img{
     width: 100%;
     height: 200px;
-    /* aspect-ratio: 0.5 / 0.5; */
     object-fit: cover; 
-    /* border-radius: 10px; */
 }
 .blog h4{
     font-size: 20px;
@@ -307,12 +297,13 @@ section h3{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
 /* footer */
 footer{
     background-image: url(photos/footerTwo.jpg);
     color: white;
     text-align: center;
-    /* padding: 20px 0; */
 }
 footer div{
     background-color: rgba(36, 33, 34, 0.377);
@@ -342,7 +333,9 @@ footer div button:hover{
 footer a:hover{
     color: var(--colorFive);
 }
-/* media query */
+
+
+/* media query for all*/
 @media screen and (max-width: 768px){
     .header-text h1{
         font-size: 40px;
