@@ -83,17 +83,75 @@ nav ul li a:hover::after{
 .icon i:hover{
     color: var(--colorFive);
 }
+@media screen and (max-width: 768px){
+    nav .fa-circle-xmark{
+        display: block;
+        font-size: 25px;
+        color: white;
+    }
+    .icon{
+        display: none;
+    }
+    nav{
+        padding: 20px 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        color: white;
+
+    }
+    nav ul{
+        background-color: var(--colorFour);
+        position : fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px ;
+        z-index: 21 ;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px
+        
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+/* nav icons */
+nav .fa-bars{
+    display: none;
+}
+nav .fa-circle-xmark{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    nav .fa-bars{
+        display: block;
+    }
+    nav .fa-circle-xmark{
+        display: block;
+    }
+    
+}
+
 /* header-text */
 .header-text{
     width: 100%;
     height: 100vh;
     background-color: rgba(36, 33, 34, 0.377);
-    /* display: flex; */
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    /* padding: 100px 1%; */
     text-align: center;
     color: white;
 }
@@ -110,7 +168,13 @@ nav ul li a:hover::after{
     border-radius: 20px;
     border: solid 2px white;
     padding: 10px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
+.header button:hover{
+    background-color: var(--colorFive);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Modified box-shadow */
+}
+
 /* cart */
 section{
     margin: 20px 0;
@@ -120,12 +184,18 @@ section h3{
     font-size: 30px;
     margin-bottom: 20px;
 }
+.section button:hover{
+    background-color: var(--colorFive);
+}
+
+
 /* products */
 .products{
     display: grid;
     grid-template-columns: repeat(3, 0.8fr);
     gap: 10px;
     margin: 20px 30px;
+    justify-content: space-evenly;
 }
 .product{
     background-color: var(--coverColor);
@@ -134,10 +204,16 @@ section h3{
     text-align: center;
     position: relative;
     border: solid 1px var(--colorOne);
+    transition: 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+.product:hover{
+    border: solid 1px var(--colorFive);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Modified box-shadow */
 }
 .product img{
     width: 100%;
-    /* height: 200px; */
     aspect-ratio: 1 / 1;
 
     object-fit: cover;
@@ -163,9 +239,11 @@ section h3{
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
 .product button:hover{
     background-color: var(--colorFive);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Modified box-shadow */
 }
 @media screen and (max-width: 768px){
     .products{
@@ -185,12 +263,9 @@ section h3{
     width: 100%;
     height: 60vh;
     background-color: rgba(36, 33, 34, 0.377);
-    /* display: flex; */
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    /* padding: 100px 1%; */
     text-align: center;
     color: white;
 }
@@ -208,6 +283,20 @@ section h3{
     border: solid 2px white;
     padding: 10px 25px;
 }
+.product-text button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+.product-text button:hover{
+    background-color: var(--colorFive);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Modified box-shadow */
+}
 /* second products */
 .second-products{
     display: grid;
@@ -215,15 +304,9 @@ section h3{
     gap: 10px;
     margin: 20px 30px;
 }
-/* .productimg{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-} */
 .product-img img{
     width: 100%;
     height: 200px;
-    /* aspect-ratio: 1 / 1; */
 
     object-fit: cover;
     border-radius: 10px;
@@ -236,13 +319,12 @@ section h3{
     background-color: black;
     color: white;
     cursor: pointer;
-    /* position: absolute; */
     bottom: 20px;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
 .product-text button:hover{
     background-color: var(--colorFive);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Modified box-shadow */
 }
 .product-text{
     background-color: var(--coverColor);
@@ -265,7 +347,9 @@ section h3{
         grid-template-columns: repeat(1, 1fr);
     }
 }
-/* blog */
+
+
+/* blog section */
 .one h3{
     text-align: center;
     font-size: 30px;
@@ -284,14 +368,17 @@ section h3{
     border-radius: 10px;
     text-align: center;
     position: relative;
-    /* border: solid 1px var(--colorOne); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
 .blog img{
     width: 100%;
-    height: 200px;
-    /* aspect-ratio: 0.5 / 0.5; */
+    aspect-ratio: 1 / 1; /* Make images square */
     object-fit: cover; 
-    /* border-radius: 10px; */
+    border-radius: 10px; /* Optional: add border-radius for rounded corners */
+    transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+.blog img:hover{
+    transform: scale(1.05); /* Added hover effect */
 }
 .blog h4{
     font-size: 20px;
@@ -307,12 +394,13 @@ section h3{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
 /* footer */
 footer{
     background-image: url(photos/footerTwo.jpg);
     color: white;
     text-align: center;
-    /* padding: 20px 0; */
 }
 footer div{
     background-color: rgba(36, 33, 34, 0.377);
@@ -335,14 +423,18 @@ footer div button{
     color: white;
     cursor: pointer;
     margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
 footer div button:hover{
     background-color: var(--colorFive);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Modified box-shadow */
 }
 footer a:hover{
     color: var(--colorFive);
 }
-/* media query */
+
+
+/* media query for all*/
 @media screen and (max-width: 768px){
     .header-text h1{
         font-size: 40px;
@@ -392,3 +484,22 @@ footer a:hover{
         font-size: 14px;
     }
 }
+/* copilot */
+/* ...existing code... */
+
+/* @media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+} */
