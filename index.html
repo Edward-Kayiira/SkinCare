@@ -13,11 +13,12 @@
     
         <nav>
             <img src="photos/SkinCare.png" alt="logo" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">New Arrivals</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Guide Me</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
             <div class="icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -25,6 +26,8 @@
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
+            
+            <i class="fa-solid fa-bars"  onclick="openmenu()"></i>
         </nav>
         <header class="header">
 <!-- <div class="container">  -->
